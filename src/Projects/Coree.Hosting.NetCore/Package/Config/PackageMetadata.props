@@ -10,8 +10,8 @@
     <Copyright>Copyright © Carsten Riedel 2024</Copyright>
     <PackageId>Coree.Hosting.NetCore</PackageId>
     <PackageTags>dotnet;class;library</PackageTags>
-    <PackageProjectUrl>https://github.com/carsten-riedel/Coree.Hosting.NETStandard</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/carsten-riedel/Coree.Hosting.NETStandard</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/carsten-riedel/Coree.Hosting.NetCore</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/carsten-riedel/Coree.Hosting.NetCore</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
 
     <VersionMajor>0</VersionMajor>
@@ -26,7 +26,7 @@
     <AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
 
     <Description>
-     <![CDATA[.NETStandard library.]]>
+     <![CDATA[.NetCore library.]]>
     </Description>
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
     <PackageLicenseFile>License.txt</PackageLicenseFile>
