@@ -7,7 +7,7 @@
     <Authors>Carsten Riedel</Authors>
     <Owners>Carsten Riedel</Owners>
     <Company></Company>
-    <Copyright>Copyright © Carsten Riedel 2024</Copyright>
+    <Copyright>Copyright © 2024 Carsten Riedel</Copyright>
     <PackageId>Coree.NET</PackageId>
     <PackageTags>dotnet;class;library</PackageTags>
     <PackageProjectUrl>https://github.com/carsten-riedel/Coree.NET</PackageProjectUrl>
