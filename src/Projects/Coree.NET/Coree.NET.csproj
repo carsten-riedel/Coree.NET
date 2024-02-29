@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
@@ -11,7 +11,7 @@
   <Import Project="Package/Config/PackageSpecs.props" />
 
   <ItemGroup>
-    <PackageReference Include="Coree.Hosting.NETStandard" Version="0.1.8825.30613-prerelease" />
+    <PackageReference Include="Coree.NETStandard" Version="0.1.8825.34911" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
   </ItemGroup>
 

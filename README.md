@@ -1,1 +1,2 @@
 # Coree.NetCore
+### Package placeholder
