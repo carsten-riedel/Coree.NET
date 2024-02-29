@@ -6,6 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <!-- NuGet Package configuration -->
+  <Import Project="Package/Config/PackageMetadata.props" />
+  <Import Project="Package/Config/PackageSpecs.props" />
+
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
   </ItemGroup>
