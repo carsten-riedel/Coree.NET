@@ -1,5 +1,5 @@
-﻿namespace Coree.Hosting.NetCore
-{
+﻿namespace Coree.NET
+
     public class Class1
     {
 

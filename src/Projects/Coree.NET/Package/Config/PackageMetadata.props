@@ -8,10 +8,10 @@
     <Owners>Carsten Riedel</Owners>
     <Company></Company>
     <Copyright>Copyright © Carsten Riedel 2024</Copyright>
-    <PackageId>Coree.Hosting.NetCore</PackageId>
+    <PackageId>Coree.NET</PackageId>
     <PackageTags>dotnet;class;library</PackageTags>
-    <PackageProjectUrl>https://github.com/carsten-riedel/Coree.Hosting.NetCore</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/carsten-riedel/Coree.Hosting.NetCore</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/carsten-riedel/Coree.NET</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/carsten-riedel/Coree.NET</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
 
     <VersionMajor>0</VersionMajor>

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Coree.Hosting.NetCore", "Projects\Coree.Hosting.NetCore\Coree.Hosting.NetCore.csproj", "{F1E80EF2-A1BA-4C92-918B-D6FB25F4E698}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Coree.NET", "Projects\Coree.NET\Coree.NET.csproj", "{1B7F32D4-AC52-4772-99F0-C5E9F567D770}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F1E80EF2-A1BA-4C92-918B-D6FB25F4E698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F1E80EF2-A1BA-4C92-918B-D6FB25F4E698}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F1E80EF2-A1BA-4C92-918B-D6FB25F4E698}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F1E80EF2-A1BA-4C92-918B-D6FB25F4E698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B7F32D4-AC52-4772-99F0-C5E9F567D770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B7F32D4-AC52-4772-99F0-C5E9F567D770}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B7F32D4-AC52-4772-99F0-C5E9F567D770}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B7F32D4-AC52-4772-99F0-C5E9F567D770}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
