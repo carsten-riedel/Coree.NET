@@ -1,6 +1,6 @@
 ﻿namespace Coree.NET
 { 
-    public class Class1
+    public class Root
     {
 
     }
