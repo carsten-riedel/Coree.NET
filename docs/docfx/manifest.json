@@ -4,10 +4,10 @@
   "files": [
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/Coree.NET.Class1.yml",
+      "source_relative_path": "api/Coree.NET.Root.yml",
       "output": {
         ".html": {
-          "relative_path": "api/Coree.NET.Class1.html"
+          "relative_path": "api/Coree.NET.Root.html"
         }
       },
       "version": ""

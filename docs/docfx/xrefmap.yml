@@ -7,9 +7,9 @@ references:
   commentId: N:Coree.NET
   fullName: Coree.NET
   nameWithType: Coree.NET
-- uid: Coree.NET.Class1
-  name: Class1
-  href: api/Coree.NET.Class1.html
-  commentId: T:Coree.NET.Class1
-  fullName: Coree.NET.Class1
-  nameWithType: Class1
+- uid: Coree.NET.Root
+  name: Root
+  href: api/Coree.NET.Root.html
+  commentId: T:Coree.NET.Root
+  fullName: Coree.NET.Root
+  nameWithType: Root
