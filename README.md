@@ -6,4 +6,4 @@ Coree.NET is a comprehensive library that provides a wide range of generic helpe
 ### Documentation
 As Coree.NET is exclusively a library project, you can thoroughly explore its functionalities through the Docfx API documentation. This documentation is available in a Markdown format similar to this text, ensuring easy access and understanding for developers.
 
-[Coree.NET Docfx API](https://carsten-riedel.github.io/Coree.NET/index.html)
+[Coree.NET Docfx API](https://carsten-riedel.github.io/Coree.NET/docfx/index.html)
