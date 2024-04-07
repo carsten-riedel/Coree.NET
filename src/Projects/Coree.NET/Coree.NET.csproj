@@ -12,7 +12,7 @@
   <Import Project="Package/Config/PackageSpecs.props" />
 
   <ItemGroup>
-    <PackageReference Include="Coree.NETStandard" Version="0.1.8825.37975" />
+    <PackageReference Include="Coree.NETStandard" Version="0.1.8863.15268" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
   </ItemGroup>
 
