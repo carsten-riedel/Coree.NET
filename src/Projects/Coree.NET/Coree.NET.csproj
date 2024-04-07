@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <PackageReference Include="Coree.NETStandard" Version="0.1.8863.15268" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
   </ItemGroup>
 
 </Project>
