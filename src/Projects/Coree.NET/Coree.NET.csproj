@@ -12,7 +12,7 @@
   <Import Project="Package/Config/PackageSpecs.props" />
 
   <ItemGroup>
-    <PackageReference Include="Coree.NETStandard" Version="0.1.8863.15268" />
+    <PackageReference Include="Coree.NETStandard" Version="0.1.*" />
   </ItemGroup>
 
 </Project>
