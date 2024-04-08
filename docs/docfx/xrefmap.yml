@@ -1,15 +1,57 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: Coree.NET
-  name: Coree.NET
-  href: api/Coree.NET.html
-  commentId: N:Coree.NET
-  fullName: Coree.NET
-  nameWithType: Coree.NET
-- uid: Coree.NET.Root
-  name: Root
-  href: api/Coree.NET.Root.html
-  commentId: T:Coree.NET.Root
-  fullName: Coree.NET.Root
-  nameWithType: Root
+- uid: Coree.NET.Utilities
+  name: Coree.NET.Utilities
+  href: api/Coree.NET.Utilities.html
+  commentId: N:Coree.NET.Utilities
+  fullName: Coree.NET.Utilities
+  nameWithType: Coree.NET.Utilities
+- uid: Coree.NET.Utilities.MainContext
+  name: MainContext
+  href: api/Coree.NET.Utilities.MainContext.html
+  commentId: T:Coree.NET.Utilities.MainContext
+  fullName: Coree.NET.Utilities.MainContext
+  nameWithType: MainContext
+- uid: Coree.NET.Utilities.MainContext.EnsureSingleInstance(System.Action,System.Boolean)
+  name: EnsureSingleInstance(Action, bool)
+  href: api/Coree.NET.Utilities.MainContext.html#Coree_NET_Utilities_MainContext_EnsureSingleInstance_System_Action_System_Boolean_
+  commentId: M:Coree.NET.Utilities.MainContext.EnsureSingleInstance(System.Action,System.Boolean)
+  name.vb: EnsureSingleInstance(Action, Boolean)
+  fullName: Coree.NET.Utilities.MainContext.EnsureSingleInstance(System.Action, bool)
+  fullName.vb: Coree.NET.Utilities.MainContext.EnsureSingleInstance(System.Action, Boolean)
+  nameWithType: MainContext.EnsureSingleInstance(Action, bool)
+  nameWithType.vb: MainContext.EnsureSingleInstance(Action, Boolean)
+- uid: Coree.NET.Utilities.MainContext.EnsureSingleInstance*
+  name: EnsureSingleInstance
+  href: api/Coree.NET.Utilities.MainContext.html#Coree_NET_Utilities_MainContext_EnsureSingleInstance_
+  commentId: Overload:Coree.NET.Utilities.MainContext.EnsureSingleInstance
+  isSpec: "True"
+  fullName: Coree.NET.Utilities.MainContext.EnsureSingleInstance
+  nameWithType: MainContext.EnsureSingleInstance
+- uid: Coree.NET.Utilities.MainContext.IsDebugBuild
+  name: IsDebugBuild()
+  href: api/Coree.NET.Utilities.MainContext.html#Coree_NET_Utilities_MainContext_IsDebugBuild
+  commentId: M:Coree.NET.Utilities.MainContext.IsDebugBuild
+  fullName: Coree.NET.Utilities.MainContext.IsDebugBuild()
+  nameWithType: MainContext.IsDebugBuild()
+- uid: Coree.NET.Utilities.MainContext.IsDebugBuild*
+  name: IsDebugBuild
+  href: api/Coree.NET.Utilities.MainContext.html#Coree_NET_Utilities_MainContext_IsDebugBuild_
+  commentId: Overload:Coree.NET.Utilities.MainContext.IsDebugBuild
+  isSpec: "True"
+  fullName: Coree.NET.Utilities.MainContext.IsDebugBuild
+  nameWithType: MainContext.IsDebugBuild
+- uid: Coree.NET.Utilities.MainContext.ProfileOptimization
+  name: ProfileOptimization()
+  href: api/Coree.NET.Utilities.MainContext.html#Coree_NET_Utilities_MainContext_ProfileOptimization
+  commentId: M:Coree.NET.Utilities.MainContext.ProfileOptimization
+  fullName: Coree.NET.Utilities.MainContext.ProfileOptimization()
+  nameWithType: MainContext.ProfileOptimization()
+- uid: Coree.NET.Utilities.MainContext.ProfileOptimization*
+  name: ProfileOptimization
+  href: api/Coree.NET.Utilities.MainContext.html#Coree_NET_Utilities_MainContext_ProfileOptimization_
+  commentId: Overload:Coree.NET.Utilities.MainContext.ProfileOptimization
+  isSpec: "True"
+  fullName: Coree.NET.Utilities.MainContext.ProfileOptimization
+  nameWithType: MainContext.ProfileOptimization
