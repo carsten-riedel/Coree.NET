@@ -221,10 +221,14 @@ if (-not (Test-CommandAvailability -CommandName "docfx"))
     dotnet tool install --global docfx --version 2.74.1
 }
 
+
+Log-Block -Stage "Prepare" -Section "Configure" -Task "Adding addtional nuget sources"
+dotnet nuget add source --name nugettest "https://apiint.nugettest.org/v3/index.json"
+
+
 Log-Block -Stage "Build" -Section "Clean" -Task "Clean output directorys"
-
-
 Clear-BinObjDirectories -sourceDirectory "src/Projects/Coree.NET"
+
 
 Log-Block -Stage "Build" -Section "Restore" -Task "Restoreing nuget packages."
 dotnet restore ./src
@@ -235,8 +239,10 @@ dotnet pack ./src --no-restore /p:ContinuousIntegrationBuild=true -c Release
 Log-Block -Stage "Build" -Section "Docfx" -Task "Generating the docfx files."
 docfx src/Projects/Coree.NET/Docfx/build/docfx_local.json
 
+
 Log-Block -Stage "Copy files" -Section "Docfx" -Task "Copying files from the docfx output to docs/docfx"
 Copy-Directory -sourceDir "src/Projects/Coree.NET/Docfx/result/local/" -destinationDir "docs/docfx" -exclusions @('.git', '.github')
+
 
 Log-Block -Stage "Commit and Push" -Section "Docfx" -Task "Commit and Push docs/docfx"
 git config --global user.name 'Updated form Workflow'
@@ -245,17 +251,20 @@ git add docs/docfx
 git commit -m "Updated form Workflow"
 git push origin master
 
+
 Log-Block -Stage "Publish" -Section "Packages" -Task "dotnet nuget push github"
 $pattern = "src/Projects/Coree.NET/bin/Pack/Coree.NET.*.nupkg"
 $firstFileMatch = Get-ChildItem -Path $pattern -File | Select-Object -First 1
+
+
+#Add nuget sources.
+Log-Block -Stage "Publish" -Section "Packages" -Task "dotnet nuget push nuget"
 dotnet nuget add source --username carsten-riedel --password $SECRETS_PAT --store-password-in-clear-text --name github "https://nuget.pkg.github.com/carsten-riedel/index.json"
 dotnet nuget push "$($firstFileMatch.FullName)" --api-key $SECRETS_PAT --source "github"
-Log-Block -Stage "Publish" -Section "Packages" -Task "dotnet nuget push nuget"
 dotnet nuget push "$($firstFileMatch.FullName)" --api-key $SECRETS_NUGET_TEST_PAT --source https://apiint.nugettest.org/v3/index.json
 
-Log-Block -Stage "Call" -Section "Dispatch" -Task "dispatching a other job"
-curl -X POST -H "Authorization: token $SECRETS_PAT" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/carsten-riedel/Coree.NET/dispatches -d '{"event_type": "trigger-other-workflow"}'
-
+#Log-Block -Stage "Call" -Section "Dispatch" -Task "dispatching a other job"
+#curl -X POST -H "Authorization: token $SECRETS_PAT" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/carsten-riedel/Coree.NET/dispatches -d '{"event_type": "trigger-other-workflow"}'
 
 Log-Block -Stage "Cleanup" -Section "Packages" -Task "clean old github packages"
 $headers = @{
@@ -271,15 +280,16 @@ foreach ($item in $GitHubNugetPackagelistOld)
 }
 
 Log-Block -Stage "Cleanup" -Section "Packages" -Task "clean old nuget.org packages"
-$NugetRegistrationsBaseUrlAPI = (Invoke-RestMethod -Uri 'https://api.nuget.org/v3/index.json' | ForEach-Object { $_.resources } | Where-Object { $_.'@type' -like 'RegistrationsBaseUrl/3.6.0' }).'@Id'
-$NugetPackageList = (Invoke-RestMethod -Uri "$NugetRegistrationsBaseUrlAPI$("Coree.NET".ToLowerInvariant())/index.json").items.items.catalogEntry
-$Listed = $NugetPackageList | Where-Object { $_.'listed' -eq $true }
-$ListedIgnoreNewest = ($Listed[-1..-($Listed.Count)] | Select-Object -Skip 4)
-foreach ($item in $ListedIgnoreNewest)
-{
-    $headers = @{
-        'X-nuget-APIKey' = "$SECRETS_NUGET_PAT"
-    }
-    Invoke-RestMethod -Uri "https://www.nuget.org/api/v2/package/Coree.NET/$($item.version)" -Method Delete -Headers $headers | Out-Null
-    Write-Output "Unlisted package Coree.NET $($item.version)"
-}
+
+#$NugetRegistrationsBaseUrlAPI = (Invoke-RestMethod -Uri 'https://api.nuget.org/v3/index.json' | ForEach-Object { $_.resources } | Where-Object { $_.'@type' -like 'RegistrationsBaseUrl/3.6.0' }).'@Id'
+#$NugetPackageList = (Invoke-RestMethod -Uri "$NugetRegistrationsBaseUrlAPI$("Coree.NET".ToLowerInvariant())/index.json").items.items.catalogEntry
+#$Listed = $NugetPackageList | Where-Object { $_.'listed' -eq $true }
+#$ListedIgnoreNewest = ($Listed[-1..-($Listed.Count)] | Select-Object -Skip 4)
+#foreach ($item in $ListedIgnoreNewest)
+#{
+#    $headers = @{
+#        'X-nuget-APIKey' = "$SECRETS_NUGET_PAT"
+#    }
+#    Invoke-RestMethod -Uri "https://www.nuget.org/api/v2/package/Coree.NET/$($item.version)" -Method Delete -Headers $headers | Out-Null
+#    Write-Output "Unlisted package Coree.NET $($item.version)"
+#}
