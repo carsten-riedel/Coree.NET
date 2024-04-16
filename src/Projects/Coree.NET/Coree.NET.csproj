@@ -12,6 +12,7 @@
   <Import Project="Package/Config/PackageMetadata.props" />
   <Import Project="Package/Config/PackageSpecs.props" />
   <ItemGroup>
+    <None Remove="Extensions\Assembly.cs" />
     <None Remove="Utilities\NETStandard\EnsureSingleInstance.cs" />
     <None Remove="Utilities\NETStandard\MainContext\IsDebugBuild.cs" />
     <None Remove="Utilities\NET\MainContext.cs" />
@@ -19,7 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Coree.NETStandard" Version="0.1.8864.9274" />
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Coree.NETStandard" Version="0.1.8872.37654-feature" />
   </ItemGroup>
 
 </Project>
