@@ -1,0 +1,8 @@
+### YamlMime:TableOfContent
+items:
+- uid: Coree.NET.Utilities
+  name: Coree.NET.Utilities
+  items:
+  - uid: Coree.NET.Utilities.MainContext
+    name: MainContext
+memberLayout: SamePage

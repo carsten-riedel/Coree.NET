@@ -1,0 +1,7 @@
+{
+  "Coree.NET.Utilities": "Coree.NET.Utilities.yml",
+  "Coree.NET.Utilities.MainContext": "Coree.NET.Utilities.MainContext.yml",
+  "Coree.NET.Utilities.MainContext.EnsureSingleInstance(System.Action,System.Boolean)": "Coree.NET.Utilities.MainContext.yml",
+  "Coree.NET.Utilities.MainContext.IsDebugBuild": "Coree.NET.Utilities.MainContext.yml",
+  "Coree.NET.Utilities.MainContext.ProfileOptimization": "Coree.NET.Utilities.MainContext.yml"
+}
