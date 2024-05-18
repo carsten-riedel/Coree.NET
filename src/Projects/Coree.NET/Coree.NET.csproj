@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Coree.NETStandard" Version="0.1.8872.37654-feature" />
+    <PackageReference Include="Coree.NETStandard" Version="0.1.8898.10034" />
   </ItemGroup>
 
 </Project>

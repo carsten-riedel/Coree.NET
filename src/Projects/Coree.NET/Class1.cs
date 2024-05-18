@@ -9,10 +9,9 @@ namespace Coree.NET
     internal class Class1
     {
 
-        public static void ssd()
+        public static void Stub()
         {
-            TimeOnly ssd = new TimeOnly();  
-           
+            //TimeOnly ssd = new TimeOnly();  
         }
     }
 }

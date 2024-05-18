@@ -4,14 +4,13 @@
       "noRestore": true,
       "src": [
         {
-          "src": "../../../Coree.NET",
+          "src": "../../src/Projects/Coree.NET",
           "files": [
             "**/*.csproj"
           ]
         }
       ],
-      "dest": "api",
-      "filter": "filterConfig.yml"
+      "dest": "api"
     }
   ],
   "build": {
