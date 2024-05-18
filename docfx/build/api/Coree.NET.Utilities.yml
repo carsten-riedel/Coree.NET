@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Coree.NET.Utilities
+  commentId: N:Coree.NET.Utilities
+  id: Coree.NET.Utilities
+  children:
+  - Coree.NET.Utilities.MainContext
+  langs:
+  - csharp
+  - vb
+  name: Coree.NET.Utilities
+  nameWithType: Coree.NET.Utilities
+  fullName: Coree.NET.Utilities
+  type: Namespace
+  assemblies:
+  - Coree.NET
+references:
+- uid: Coree.NET.Utilities.MainContext
+  commentId: T:Coree.NET.Utilities.MainContext
+  href: Coree.NET.Utilities.MainContext.html
+  name: MainContext
+  nameWithType: MainContext
+  fullName: Coree.NET.Utilities.MainContext
