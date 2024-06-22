@@ -13,57 +13,33 @@ namespace Coree.NET.Utilities
         /// <remarks>
         /// Call this method early in the Program.Main to optimize startup on subsequent runs.
         /// </remarks>
-        public static void ProfileOptimization()
+        public static bool ProfileOptimization()
         {
-            var primaryOrCallingAssembly = Assembly.GetEntryAssembly() ?? Assembly.GetCallingAssembly();
-            var assemblyName = primaryOrCallingAssembly.GetName().Name;
-            if (string.IsNullOrEmpty(assemblyName))
-            {
-                return;
-            }
-            assemblyName = $"{assemblyName}.profile";
-
             // Define the potential profile locations
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
             string localAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            string tempPath = System.IO.Path.GetTempPath();
 
-            if (string.IsNullOrEmpty(baseDirectory) || string.IsNullOrEmpty(localAppData))
+
+            var directory = Coree.NETStandard.Utilities.MainContext.TryGetOrCreateAppNameDirectory();
+            var appName = Coree.NETStandard.Utilities.MainContext.TryGetAppName();
+            if (appName != null && directory != null)
             {
-                return;
-            }
-
-            string[] possibleLocations = {
-                    Path.Combine(baseDirectory, assemblyName),
-                    Path.Combine(localAppData, assemblyName)
-                };
-
-            foreach (var profileLocation in possibleLocations)
-            {
+                var filename = $"{appName}.profile";
                 try
                 {
-                    string? directory = Path.GetDirectoryName(profileLocation);
-                    if (string.IsNullOrEmpty(directory))
-                    {
-                        continue;
-                    }
-
-                    if (!Directory.Exists(directory))
-                    {
-                        Directory.CreateDirectory(directory);
-                    }
-
-                    File.WriteAllBytes(profileLocation, Array.Empty<byte>());
-                    File.Delete(profileLocation);
-
-                    System.Runtime.ProfileOptimization.SetProfileRoot(directory);
-                    System.Runtime.ProfileOptimization.StartProfile(Path.GetFileName(profileLocation));
-                    return;
+                    System.Runtime.ProfileOptimization.SetProfileRoot(directory.FullName);
+                    System.Runtime.ProfileOptimization.StartProfile(filename);
+                    return true;
                 }
                 catch (Exception)
                 {
-                    continue;
+                    return false;
                 }
             }
+
+            return false;
         }
+
     }
 }
