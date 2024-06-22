@@ -28,23 +28,9 @@ namespace Coree.NET.Utilities
                 var filename = $"{appName}.profile";
                 try
                 {
-                    string? directory = Path.GetDirectoryName(profileLocation);
-                    if (string.IsNullOrEmpty(directory))
-                    {
-                        continue;
-                    }
-
-                    if (!Directory.Exists(directory))
-                    {
-                        Directory.CreateDirectory(directory);
-                    }
-
-                    File.WriteAllBytes(profileLocation, Array.Empty<byte>());
-                    File.Delete(profileLocation);
-
-                    System.Runtime.ProfileOptimization.SetProfileRoot(directory);
-                    System.Runtime.ProfileOptimization.StartProfile(Path.GetFileName(profileLocation));
-                    return;
+                    System.Runtime.ProfileOptimization.SetProfileRoot(directory.FullName);
+                    System.Runtime.ProfileOptimization.StartProfile(filename);
+                    return true;
                 }
                 catch (Exception)
                 {
