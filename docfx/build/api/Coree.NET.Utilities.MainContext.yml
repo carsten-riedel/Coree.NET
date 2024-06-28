@@ -67,8 +67,10 @@ items:
   remarks: Call this method early in the Program.Main to optimize startup on subsequent runs.
   example: []
   syntax:
-    content: public static void ProfileOptimization()
-    content.vb: Public Shared Sub ProfileOptimization()
+    content: public static bool ProfileOptimization()
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function ProfileOptimization() As Boolean
   overload: Coree.NET.Utilities.MainContext.ProfileOptimization*
 - uid: Coree.NET.Utilities.MainContext.EnsureSingleInstance(System.Action,System.Boolean)
   commentId: M:Coree.NET.Utilities.MainContext.EnsureSingleInstance(System.Action,System.Boolean)
@@ -423,6 +425,17 @@ references:
   name: ProfileOptimization
   nameWithType: MainContext.ProfileOptimization
   fullName: Coree.NET.Utilities.MainContext.ProfileOptimization
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
 - uid: System.Action
   commentId: T:System.Action
   parent: System
@@ -444,17 +457,6 @@ references:
   name: EnsureSingleInstance
   nameWithType: MainContext.EnsureSingleInstance
   fullName: Coree.NET.Utilities.MainContext.EnsureSingleInstance
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.boolean
-  name: bool
-  nameWithType: bool
-  fullName: bool
-  nameWithType.vb: Boolean
-  fullName.vb: Boolean
-  name.vb: Boolean
 - uid: System.Diagnostics.DebuggableAttribute
   commentId: T:System.Diagnostics.DebuggableAttribute
   isExternal: true
